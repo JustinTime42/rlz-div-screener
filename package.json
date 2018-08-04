@@ -1,0 +1,28 @@
+{
+  "name": "rlz-div-screener",
+  "version": "1.0.0",
+  "description": "screener based on 78.6 rlz and volume divergence",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinTime42/rlz-div-screener.git"
+  },
+  "keywords": [
+    "cryptocurrency",
+    "trading"
+  ],
+  "author": "Justin Schneider",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JustinTime42/rlz-div-screener/issues"
+  },
+  "homepage": "https://github.com/JustinTime42/rlz-div-screener#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "knex": "^0.15.2"
+  }
+}
