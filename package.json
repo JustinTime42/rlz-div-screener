@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/JustinTime42/rlz-div-screener#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "knex": "^0.15.2"
+    "knex": "^0.15.2",
+    "pg": "^7.4.3"
   }
 }
