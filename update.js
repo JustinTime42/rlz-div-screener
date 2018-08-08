@@ -34,14 +34,16 @@ const getCoinHist = (coinSymbol) => {
 }
 
 const isRlz = (priceHistory) => {
-    let highPrice = 0
+    let highPrice = 0    
     let currentPrice = priceHistory[0].close
+    let lowPrice = currentPrice
 
     priceHistory.forEach(day => {
         highPrice = day.close > highPrice ? day.close : highPrice
+        lowPrice = day.close < lowPrice ? day.close : lowPrice
     })
-
-    return currentPrice < highPrice * .786 ? true : false  
+    let rlz = highPrice - ((highPrice - lowPrice) * .786)
+    return currentPrice < rlz ? true : false  
 }
 
 const isPriceDown = (priceHistory) => {
