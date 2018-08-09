@@ -34,7 +34,7 @@ const getCoinHist = (coinSymbol) => {
         // Add coin to table if price is in RLZ, price is trending down, and volume is trending up.
         let data = response.data.Data        
         if  ( isRlz(data) && isPriceDown(data) && isVolumeUp(data) ) {                 
-            db('ScreenedCoins')
+            db('screenedcoins')
             .returning('coin')
             .insert({coin: coinSymbol})   
             .catch(error => console.log(error.detail))
@@ -42,7 +42,7 @@ const getCoinHist = (coinSymbol) => {
         // Otherwise, remove the coin from the table.
         } else {
             console.log("removing " + coinSymbol + " from table")
-            db('ScreenedCoins')
+            db('screenedcoins')
             .where('coin', coinSymbol)
             .del()
             .then(console.log)
