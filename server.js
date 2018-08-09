@@ -16,7 +16,7 @@ app.use(cors())
 
 app.get('/', (req, res) => { 
    
-    db.select('*').from('ScreenedCoins')
+    db.select('*').from('screenedcoins')
     .then(data => {
         res.json(data)
     })       

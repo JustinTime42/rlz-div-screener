@@ -1,5 +1,3 @@
-
-
 const axios = require('axios')
 const knex = require('knex')
 const pg = require('pg')
